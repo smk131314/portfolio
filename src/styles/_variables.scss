@@ -1,4 +1,25 @@
 // Colors
+$black: #000000;
+$black-opacity: rgba(0,0,0,0.85);
+$grey-dark: #2B2B2B;
+$grey-shadow: #4F4F4F;
+$grey: #808080;
+$grey-light: #EEEEEE;
+$white: #FFFFFF;
+$blue-primary: #4654C8;
+$green-primary: #43F558;
+$red: #F45237;
+
+// Text-size styles
+/* base size: desc (16px) */
+$extra-large: 4.25rem;
+$header: 3rem;
+$highlight: 2.5rem;
+$mobile-highlight: 2.25rem;
+$button-text: 1.5rem;
+$button-big: 2rem;
+$desc: 1rem;
+$detail: 0.75rem;
 
 // Breakpoints
 $breakpoint-mobile: 335px;
