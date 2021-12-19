@@ -7,7 +7,7 @@ const HeaderNavigation = () => {
     <nav>
       <ul>
         {Object.keys(LINKS).map((item) => (
-          <li><Link href={LINKS[item].link}>{LINKS[item].title}</Link></li>
+          <li key={LINKS[item].id}><Link href={LINKS[item].link}>{LINKS[item].title}</Link></li>
         ))}
       </ul>
     </nav>

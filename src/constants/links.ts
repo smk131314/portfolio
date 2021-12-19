@@ -9,22 +9,22 @@ type LinksObjectType = {
 export const LINKS: LinksObjectType = {
   main: {
     id: 'main',
-    link: '/main',
+    link: '/',
     title: 'Home'
   },
   experience: {
     id: 'experience',
-    link: '/main#experience',
+    link: '#experience',
     title: 'Experience'
   },
   projects: {
     id: 'projects',
-    link: '/main#projects',
+    link: '#projects',
     title: 'Projects',
   },
   aboutMe: {
     id: 'aboutMe',
-    link: '/main#aboutMe',
+    link: '#aboutMe',
     title: 'About me'
   }
 }
