@@ -1,10 +1,10 @@
-type LinkType = {
-  id: string;
-  link: string;
-  title: string;
+interface LinkType  {
+  id: string
+  link: string
+  title: string
 }
 type LinksObjectType = {
-  [index: string]: LinkType;
+  [index: string]: LinkType
 }
 export const LINKS: LinksObjectType = {
   main: {

@@ -1,0 +1,30 @@
+@import "./variables";
+@import "./mixin";
+
+$buttonHeight: 3rem;
+
+.contactButton {
+  @include button;
+  width: 10rem;
+  background-color: $grey-light;
+  font-size: $desc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem 0 1.5rem;
+  .circle {
+    $circleWidth: calc($buttonHeight - 1rem);
+
+    background-color: $green-primary;
+    height: $circleWidth;
+    width: $circleWidth;
+    border-radius: calc($circleWidth/2);
+    display: flex;
+    align-items: center;
+    filter: $narrow-shadow;
+    
+    > svg {
+      margin: 0 auto;
+    }
+  }
+}

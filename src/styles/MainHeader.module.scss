@@ -1,0 +1,12 @@
+@import "./variables";
+
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1.5rem;
+  .linkText {
+    font-size: $button-text;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,25 @@
+@import "./variables";
+
+.headerNavigation {
+  font-size: $button-text;
+
+  ul {
+    display: flex;
+    padding: 0;
+  }
+  li {
+    margin-right: 1rem;
+    &:not(:first-child)::before{
+      content: '/';
+      margin-right: 1rem;
+    }
+    &.active {
+      color: $green-primary;
+      font-weight: bold;
+      &:not(:first-child)::before {
+        color: white;
+        font-weight: normal;
+      }
+    }
+  }
+}

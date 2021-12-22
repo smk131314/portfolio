@@ -1,12 +1,16 @@
 import Link from 'next/link'
 import HeaderNavigation from "@components/HeaderNavigation"
-import Contact from "@components/contact"
+import Contact from '@components/Contact'
 import { LINKS } from '@src/constants/links'
+import styles from '@styles/MainHeader.module.scss'
+import classNames from 'classNames/bind';
+
+const cx = classNames.bind(styles);
 
 const MainHeader = () => {
   return (
-    <header>
-      <Link href={LINKS.main.link}>Home</Link>
+    <header className={cx('mainHeader')}>
+      <Link href={LINKS.main.link}><p className={cx('linkText')}>Home</p></Link>
       <HeaderNavigation />
       <Contact />
     </header>
