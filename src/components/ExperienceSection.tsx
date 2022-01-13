@@ -3,7 +3,7 @@ import { LINKS } from '@src/constants/links'
 
 const ExperienceSection = () => {
   return (
-    <section id={LINKS.experience.id}>
+    <section id={LINKS.EXPERIENCE.id}>
       Experience
     </section>
   )

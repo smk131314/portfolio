@@ -23,3 +23,9 @@
   border-radius: 1.5rem;
   box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
 }
+
+@mixin flexHorizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

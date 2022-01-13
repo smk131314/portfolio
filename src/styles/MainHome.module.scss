@@ -1,0 +1,24 @@
+@import "./variables";
+@import "./mixin";
+
+.mainHome {
+  @include flexHorizontal;
+  justify-content: center;
+  .descriptionContainer {
+    h1 {
+      font-size: $extra-large;
+      font-weight: bold;
+      line-height: calc($extra-large - 0.5rem);
+    }
+    h2 {
+      font-size: $button-text;
+      font-weight: normal;
+    }
+  }
+  .imageContainer {
+    width: 50%;
+    > img {
+      object-fit: cover;
+    }
+  }
+}

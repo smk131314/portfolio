@@ -7,22 +7,22 @@ type LinksObjectType = {
   [index: string]: LinkType
 }
 export const LINKS: LinksObjectType = {
-  main: {
+  MAIN: {
     id: 'main',
     link: '/',
     title: 'Home'
   },
-  experience: {
+  EXPERIENCE: {
     id: 'experience',
     link: '#experience',
     title: 'Experience'
   },
-  projects: {
+  PROJECTS: {
     id: 'projects',
     link: '#projects',
     title: 'Projects',
   },
-  aboutMe: {
+  ABOUTME: {
     id: 'aboutMe',
     link: '#aboutMe',
     title: 'About me'

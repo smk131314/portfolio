@@ -3,7 +3,7 @@ import { LINKS } from '@src/constants/links'
 
 const AboutMeSection = () => {
   return (
-    <section id={LINKS.aboutMe.id}>
+    <section id={LINKS.ABOUTME.id}>
       About me
     </section>
   )
