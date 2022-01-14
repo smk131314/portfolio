@@ -28,3 +28,65 @@ $buttonHeight: 3rem;
     }
   }
 }
+
+.sidebarContentWrapper {
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $black;
+  
+  > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+
+    > p {
+      color: $grey;
+      font-size: $desc;
+      text-align: center;
+    }
+  }
+
+  h1 {
+    font-size: $extra-large;
+    font-weight: bold;
+    margin: 4rem 0;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+
+  .buttonsWrapper {
+    flex: 1;
+    > button:first-child {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .iconsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > li {
+      border: 1px solid $black;
+      width: 3.75rem;
+      height: 3.75rem;
+      border-radius: 3.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 1.25rem;
+      a {
+        padding: 1rem;
+      }
+    }
+  }
+}

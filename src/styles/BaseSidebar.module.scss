@@ -1,14 +1,24 @@
 @import "./variables";
 
-.sidebarRoot {
+.sideBarWrapper {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 50;
   height: 100%;
   width: 100%;
   .overlay {
     background-color: $overlay;
+    height: 100%;
+    width: 100%;
   }
-  .contentWrapper {
-    
+  .contentContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 51;
+    height: 100%;
+    width: 25rem;
+    background-color: $green-primary;
   }
 }

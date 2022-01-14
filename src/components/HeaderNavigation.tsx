@@ -17,7 +17,7 @@ const HeaderNavigation = () => {
     <nav className={cx('headerNavigation')}>
       <ul>
         {Object.keys(LINKS).map((item) => {
-          if (item === LINKS.MAIN.id) return
+          if (item === LINKS.MAIN.id.toUpperCase()) return
           return (
             <li key={LINKS[item].id} className={cx({'active': getIsActiveTab(LINKS[item].link)})}><Link href={LINKS[item].link}>{LINKS[item].title}</Link></li>
           )

@@ -1,21 +1,85 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from '@styles/Contact.module.scss'
-import classNames from 'classNames/bind';
-import ArrowIcon from '@components/common/ArrowIcon';
-// import BaseSidebar from './common/BaseSidebar';
+import classNames from 'classNames/bind'
+import ArrowIcon from '@components/common/ArrowIcon'
+import CloseIcon from '@components/common/CloseIcon'
+import BaseSidebar from '@components/common/BaseSidebar'
+import RoundButton from '@components/common/RoundButton'
+import GithubIcon from '@images/github.svg'
+import InstagramIcon from '@images/instagram.svg'
+import LinkedinIcon from '@images/linkedin.svg'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
+const socialLinkList = [
+  {
+    name: 'github',
+    url: 'https://github.com/smk131314',
+    icon: <GithubIcon />,
+  }, {
+    name: 'linkedin',
+    url: 'https://www.linkedin.com/in/jade-seungmin-kim/',
+    icon: <LinkedinIcon />,
+  }, {
+    name: 'instagram',
+    url: '',
+    icon: <InstagramIcon />,
+  }
+]
 
 const Contact = () => {
+  const [isSideBarOpen, setIsSideBarOpen] = useState(false)
+  const openModal = () => {
+    setIsSideBarOpen(true)
+    document.body.style.overflow = 'hidden'
+  }
+  const closeModal = () => {
+    setIsSideBarOpen(false)
+    document.body.style.overflow = 'auto'
+  }
+  const openCvLink = () => {}
+
   return (
     <>
-      <button className={cx('contactButton')}>
+      <button
+        className={cx('contactButton')}
+        onClick={openModal}
+      >
         <p>Contact</p>
         <div className={cx('circle')}>
           <ArrowIcon />
         </div>
       </button>
-      {/* <BaseSidebar onClose={() => {}}>{'test'}</BaseSidebar> */}
+      {isSideBarOpen &&
+        <BaseSidebar onClose={closeModal}>
+          <div className={cx('sidebarContentWrapper')}>
+            <div onClick={closeModal}>
+              <CloseIcon size="2.25rem"/>
+            </div>
+            <section>
+              <h1>Contact</h1>
+              <div className={cx('buttonsWrapper')}>
+                <RoundButton
+                  children={<a href='mailto:jade.sm.kim@gmail.com'>Send me an E-mail</a>}
+                  className={'outlined'}
+                />
+                <RoundButton
+                  onClick={openCvLink}
+                  children='Check out CV'
+                />
+              </div>
+              <ul className={cx('iconsWrapper')}>
+                {socialLinkList.map(socialLink => (
+                  <li key={socialLink.name}>
+                    <a href={socialLink.url}>
+                      {socialLink.icon}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p>Seoul, South Korea</p>
+            </section>
+          </div>
+        </BaseSidebar>}
     </>
   )
 }
