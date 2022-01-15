@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import styles from '@styles/Contact.module.scss'
 import classNames from 'classNames/bind'
 import ArrowIcon from '@components/common/ArrowIcon'
-import CloseIcon from '@components/common/CloseIcon'
+import CloseIcon from '@images/close.svg'
 import BaseSidebar from '@components/common/BaseSidebar'
 import RoundButton from '@components/common/RoundButton'
 import GithubIcon from '@images/github.svg'
@@ -14,15 +14,15 @@ const socialLinkList = [
   {
     name: 'github',
     url: 'https://github.com/smk131314',
-    icon: <GithubIcon />,
+    icon: <GithubIcon width="1.25rem" height="1.25rem"/>,
   }, {
     name: 'linkedin',
     url: 'https://www.linkedin.com/in/jade-seungmin-kim/',
-    icon: <LinkedinIcon />,
+    icon: <LinkedinIcon width="1.25rem" height="1.25rem"/>,
   }, {
     name: 'instagram',
     url: '',
-    icon: <InstagramIcon />,
+    icon: <InstagramIcon width="1.25rem" height="1.25rem"/>,
   }
 ]
 
@@ -52,8 +52,8 @@ const Contact = () => {
       {isSideBarOpen &&
         <BaseSidebar onClose={closeModal}>
           <div className={cx('sidebarContentWrapper')}>
-            <div onClick={closeModal}>
-              <CloseIcon size="2.25rem"/>
+            <div onClick={closeModal} className={cx('closeIcon')}>
+              <CloseIcon width="2.25rem" height="2.25rem"/>
             </div>
             <section>
               <h1>Contact</h1>

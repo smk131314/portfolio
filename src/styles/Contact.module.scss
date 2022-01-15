@@ -37,7 +37,7 @@ $buttonHeight: 3rem;
   flex-direction: column;
   justify-content: space-between;
   color: $black;
-  
+
   > section {
     display: flex;
     flex-direction: column;
@@ -84,9 +84,15 @@ $buttonHeight: 3rem;
       align-items: center;
       justify-content: center;
       margin: 0 1.25rem;
-      a {
-        padding: 1rem;
-      }
+    }
+  }
+}
+
+@include mobile {
+  .sidebarContentWrapper {
+    .closeIcon > svg {
+      width: 6rem;
+      height: 6rem;
     }
   }
 }
