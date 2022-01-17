@@ -21,6 +21,19 @@
     "@types/react": "17.0.36",
     "eslint": "7",
     "eslint-config-next": "12.0.4",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
     "typescript": "4.5.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   }
 }
