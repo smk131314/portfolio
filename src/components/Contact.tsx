@@ -53,7 +53,7 @@ const Contact = () => {
         <BaseSidebar onClose={closeModal}>
           <div className={cx('sidebarContentWrapper')}>
             <div onClick={closeModal} className={cx('closeIcon')}>
-              <CloseIcon width="2.25rem" height="2.25rem"/>
+              <CloseIcon width="2.25rem" height="2.25rem" fill="black"/>
             </div>
             <section>
               <h1>Contact</h1>

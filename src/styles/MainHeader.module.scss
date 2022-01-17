@@ -1,10 +1,12 @@
 @import "./variables";
+@import "./mixin";
 
 .mainHeader {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 1.5rem;
+  padding: 0 1.5rem;
   .linkText {
     font-size: $button-text;
     cursor: pointer;
