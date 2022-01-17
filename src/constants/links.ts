@@ -1,4 +1,4 @@
-interface LinkType  {
+interface LinkType {
   id: string
   link: string
   title: string
@@ -10,12 +10,12 @@ export const LINKS: LinksObjectType = {
   MAIN: {
     id: 'main',
     link: '/',
-    title: 'Home'
+    title: 'Home',
   },
   EXPERIENCE: {
     id: 'experience',
     link: '#experience',
-    title: 'Experience'
+    title: 'Experience',
   },
   PROJECTS: {
     id: 'projects',
@@ -25,6 +25,6 @@ export const LINKS: LinksObjectType = {
   ABOUTME: {
     id: 'aboutMe',
     link: '#aboutMe',
-    title: 'About me'
-  }
+    title: 'About me',
+  },
 }

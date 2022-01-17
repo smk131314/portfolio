@@ -9,7 +9,7 @@ const cx = classNames.bind(styles)
 const ExperienceSection = () => {
   return (
     <section id={LINKS.EXPERIENCE.id} className={cx('experienceSection')}>
-      <div className={cx('progressBar')}></div>
+      <div className={cx('progressBar')} />
       <CareerCard />
     </section>
   )

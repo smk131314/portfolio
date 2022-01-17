@@ -12,7 +12,7 @@ const Main: NextPage = () => {
       <Head>
         <title>Seungmin Kim Portfolio</title>
         <meta name="description" content="Seungmin Kim portfolio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

@@ -11,19 +11,12 @@ const MainHome = () => {
     <section id={LINKS.MAIN.id} className={cx('mainHome')}>
       <div className={cx('descriptionContainer')}>
         <h1>
-          Seungmin Kim. <br/>a frontend developer.
+          Seungmin Kim. <br />a frontend developer.
         </h1>
-        <h2>
-          with experience in Architecture
-        </h2>
+        <h2>with experience in Architecture</h2>
       </div>
       <div className={cx('imageContainer')}>
-        <Image
-          src='/images/dummy.png'
-          alt="dummy"
-          width={500}
-          height={500}
-        />
+        <Image src='/images/dummy.png' alt='dummy' width={500} height={500} />
       </div>
     </section>
   )

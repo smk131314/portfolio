@@ -5,11 +5,7 @@ import styles from '@styles/CareerCard.module.scss'
 const cx = classNames.bind(styles)
 
 const CareerCard = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <div />
 }
 
 export default CareerCard
