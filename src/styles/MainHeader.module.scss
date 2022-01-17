@@ -12,3 +12,9 @@
     cursor: pointer;
   }
 }
+
+@include mobile-and-tablet {
+  .mainHeader {
+    padding-top: 1rem;
+  }
+}

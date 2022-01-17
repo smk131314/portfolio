@@ -10,7 +10,7 @@ import CloseIcon from '@images/close.svg'
 const cx = classNames.bind(styles);
 
 const HeaderNavigation = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('');
 
   const router = useRouter()
