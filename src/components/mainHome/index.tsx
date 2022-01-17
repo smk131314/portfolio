@@ -21,6 +21,8 @@ const MainHome = () => {
         <Image
           src='/images/dummy.png'
           alt="dummy"
+          width={500}
+          height={500}
         />
       </div>
     </section>
