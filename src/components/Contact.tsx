@@ -59,13 +59,15 @@ const Contact = () => {
               <h1>Contact</h1>
               <div className={cx('buttonsWrapper')}>
                 <RoundButton
-                  children={<a href='mailto:jade.sm.kim@gmail.com'>Send me an E-mail</a>}
                   className={'outlined'}
-                />
+                >
+                  <a href='mailto:jade.sm.kim@gmail.com'>Send me an E-mail</a>
+                </RoundButton>
                 <RoundButton
                   onClick={openCvLink}
-                  children='Check out CV'
-                />
+                >
+                  Check out CV
+                </RoundButton>
               </div>
               <ul className={cx('iconsWrapper')}>
                 {socialLinkList.map(socialLink => (

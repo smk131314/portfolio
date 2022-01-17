@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 const MainHeader = () => {
   return (
     <header className={cx('mainHeader')}>
-      <Link href={LINKS.MAIN.link}><p className={cx('linkText')}>Home</p></Link>
+      <Link href={LINKS.MAIN.link} passHref><p className={cx('linkText')}>Home</p></Link>
       <HeaderNavigation />
       <Contact />
     </header>

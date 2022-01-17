@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { LINKS } from '@src/constants/links'
 import classNames from 'classNames/bind'
 import styles from '@styles/MainHome.module.scss'
@@ -17,7 +18,10 @@ const MainHome = () => {
         </h2>
       </div>
       <div className={cx('imageContainer')}>
-        <img src='/images/dummy.png' alt="dummy"/>
+        <Image
+          src='/images/dummy.png'
+          alt="dummy"
+        />
       </div>
     </section>
   )
