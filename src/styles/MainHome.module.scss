@@ -2,7 +2,7 @@
 @import "./mixin";
 
 .mainHome {
-  @include flexHorizontal;
+  @include flex-horizontal;
   justify-content: center;
   .descriptionContainer {
     h1 {
