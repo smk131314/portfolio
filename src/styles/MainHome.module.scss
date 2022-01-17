@@ -4,13 +4,14 @@
 .mainHome {
   @include flex-horizontal;
   justify-content: center;
+  
   .descriptionContainer {
-    h1 {
+    > h1 {
       font-size: $extra-large;
       font-weight: bold;
       line-height: calc($extra-large - 0.5rem);
     }
-    h2 {
+    > h2 {
       font-size: $button-text;
       font-weight: normal;
     }
@@ -18,7 +19,31 @@
   .imageContainer {
     width: 50%;
     > img {
+      width: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+@include mobile-and-tablet {
+  .mainHome {
+    @include flex-vertical;
+    margin: 0 2.25rem;
+
+    .descriptionContainer {
+      > h1 {
+        font-size: $highlight;
+        line-height: calc($highlight - 0.25rem);
+        font-weight: 600;
+      }
+      > h2 {
+        font-size: $desc;
+      }
+
+    }
+
+    .imageContainer {
+      width: 100%;
     }
   }
 }
