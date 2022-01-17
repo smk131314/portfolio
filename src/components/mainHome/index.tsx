@@ -1,9 +1,9 @@
 import React from 'react'
 import { LINKS } from '@src/constants/links'
-import classNames from 'classNames/bind';
+import classNames from 'classNames/bind'
 import styles from '@styles/MainHome.module.scss'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 const MainHome = () => {
   return (
