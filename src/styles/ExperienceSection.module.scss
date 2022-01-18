@@ -16,6 +16,7 @@ $progressBarHeight: 12rem;
     height: $progressBarHeight;
     position: relative;
     padding: 0.5rem 0;
+    margin-right: 10rem;
   }
   .progressBarBg {
     background-color: $grey-light;
@@ -52,6 +53,25 @@ $progressBarHeight: 12rem;
       white-space: nowrap;
       color: $grey-light;
       margin-left: 1rem;
+    }
+  }
+
+  .cardContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@include mobile-and-tablet {
+  .experienceSection {
+    .progressBar {
+      display: none;
     }
   }
 }

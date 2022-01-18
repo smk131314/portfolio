@@ -8,22 +8,25 @@ import CareerCard from './CareerCard'
 const cx = classNames.bind(styles)
 
 const ExperienceSection = () => {
-  const steps = EXPERIENCES.map((item) => item.name)
+  const steps = EXPERIENCES.map((item) => item.companyName)
 
   return (
     <section id={LINKS.EXPERIENCE.id} className={cx('experienceSection')}>
       <div className={cx('progressBar')}>
         <div className={cx('progressBarBg')} />
-        {steps.map((step, index) => {
-          return (
+        {steps.map((step, index) => (
             <div className={cx('progressStep', `step-${index}`)} key={step}>
               <div className={cx('progressIndicator')} />
               <div className={cx('progressLabel')}>{step}</div>
             </div>
           )
-        })}
+        )}
       </div>
-      <CareerCard />
+      <div className={cx('cardContainer')}>
+        {EXPERIENCES.map(experience => (
+          <CareerCard infoObj={experience} key={experience.companyName}/>
+        ))}
+      </div>
     </section>
   )
 }

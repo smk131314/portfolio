@@ -1,2 +1,105 @@
 @import "./variables";
 @import "./mixin";
+
+.careerCard {
+  @include flex-horizontal;
+
+  .cardContainer {
+    flex: 1;
+
+    > h1 {
+      font-size: $header;
+      line-height: 2.75rem;
+    }
+
+    .companyNameWrapper {
+      @include flex-horizontal;
+      color: $blue-primary;
+
+      > p {
+        font-size: $mobile-highlight;
+        font-weight: 600;
+      }
+
+      > a {
+        @include circle-icon(2.25rem, $blue-primary)
+      }
+    }
+
+    .dateInfo {
+      color: $grey-light;
+      font-size: $detail;
+      margin-top: 0.25rem;
+    }
+
+    .companyInfo {
+      font-size: $desc;
+      line-height: $desc;
+      margin: 1.25rem 0;
+    }
+
+    .tagsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      
+      .tag {
+        @include tag(2.25rem, $white);
+        font-size: $desc;
+        margin: 0 1rem 0.75rem 0;
+      }
+      .moreButton {
+        @include circle-icon(2.25rem, $white);
+      }
+    }
+
+    .descWrapper {
+      > p {
+        color: $grey;
+        font-size: $detail;
+        margin-top: 2rem;
+      }
+      ul {
+        margin: 0;
+      }
+      li {
+        font-size: $desc;
+        line-height: $desc;
+        margin-bottom: 1rem;
+
+        b {
+          color: $blue-primary;
+        }
+      }
+    }
+  }
+
+  .imageWrapper {
+    width: 50%;
+    min-width: 20rem;
+  }
+}
+
+@include mobile-and-tablet {
+  .careerCard {
+    @include flex-vertical;
+
+    .cardContainer {
+      > h1 {
+        font-size: $mobile-highlight;
+        line-height: $mobile-highlight;
+      }
+      
+      .companyNameWrapper > p {
+        font-size: $button-text;
+      }
+
+      .companyInfo {
+        display: none;
+      }
+  
+      .tagsContainer {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}

@@ -75,14 +75,7 @@ $buttonHeight: 3rem;
     align-items: center;
 
     > li {
-      border: 1px solid $black;
-      width: 3.75rem;
-      height: 3.75rem;
-      border-radius: 3.75rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include circle-icon(3.75rem, $black);
       margin: 0 1.25rem;
     }
   }
