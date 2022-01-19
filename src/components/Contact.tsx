@@ -14,7 +14,7 @@ const socialLinkList = [
   {
     name: 'github',
     url: 'https://github.com/smk131314',
-    icon: <GithubIcon width="1.25rem" height="1.25rem" />,
+    icon: <GithubIcon width="1.25rem" height="1.25rem" fill="black" />,
   },
   {
     name: 'linkedin',
