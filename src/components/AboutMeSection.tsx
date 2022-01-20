@@ -1,8 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { LINKS } from '@src/constants/links'
+import classNames from 'classNames/bind'
+import styles from '@styles/AboutMeSection.module.scss'
+import { ABOUTMELIST } from '@src/constants/aboutme'
+
+const cx = classNames.bind(styles)
 
 const AboutMeSection = () => {
-  return <section id={LINKS.ABOUTME.id}>About me</section>
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
+  return (
+    <section id={LINKS.ABOUTME.id} className={cx('aboutMeSection')}>
+      <div className={cx('spinnerContainer')}>
+        <div className={cx('spinnerWrapper')}>
+          <span>I am a</span>
+          <ul className={cx('spinner')}>
+            {ABOUTMELIST.map((item, index) => (
+              <li key={item.title}>{item.title}</li>
+            ))}
+          </ul>
+        </div>
+        <p className={cx('description')}>
+          {ABOUTMELIST[selectedIndex].description}
+        </p>
+      </div>
+    </section>
+  )
 }
 
 export default AboutMeSection
