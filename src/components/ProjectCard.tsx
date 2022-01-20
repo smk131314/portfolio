@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classNames from 'classNames/bind'
 import styles from '@styles/ProjectCard.module.scss'
 import { ProjectType } from '@src/constants/projects'
 import LinkIcon from '@images/north_east.svg'
 import GithubIcon from '@images/github.svg'
 import Image from 'next/image'
+import ProjectModal from './ProjectModal'
 
 const cx = classNames.bind(styles)
 
@@ -15,6 +16,7 @@ type ProjectCardProps = {
 
 const ProjectCard = (props: ProjectCardProps) => {
   const { infoObj, isRightAligned } = props
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const {
     projectName,
     companyName,
@@ -28,6 +30,15 @@ const ProjectCard = (props: ProjectCardProps) => {
     descriptions,
     previewPath,
   } = infoObj
+
+  const openModal = () => {
+    setIsModalOpen(true)
+    document.body.style.overflow = 'hidden'
+  }
+  const closeModal = () => {
+    setIsModalOpen(false)
+    document.body.style.overflow = 'auto'
+  }
 
   return (
     <div className={cx('projectCard', {isRightAligned})}>
@@ -59,8 +70,9 @@ const ProjectCard = (props: ProjectCardProps) => {
             ))}</ul>
           </div>
         </div>
-        <button type='button'>Learn More</button>
+        <button type='button' onClick={openModal}>Learn More</button>
       </div>
+      {isModalOpen && <ProjectModal onClose={closeModal}/>}
     </div>
   )
 }
