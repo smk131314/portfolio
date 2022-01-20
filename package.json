@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint \"*/**/*.{js,ts,tsx}\" --fix",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
