@@ -10,14 +10,17 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@react-three/fiber": "^7.0.25",
     "@reduxjs/toolkit": "^1.6.2",
+    "@types/three": "^0.136.1",
     "classnames": "^2.3.1",
     "eslint-config-airbnb": "^18.2.1",
     "next": "^12.0.8",
     "prettier": "^2.5.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sass": "^1.45.0"
+    "sass": "^1.45.0",
+    "three": "^0.136.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.0",
