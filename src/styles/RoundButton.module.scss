@@ -1,0 +1,26 @@
+@import "./variables";
+@import "./mixin";
+
+.roundButton {
+  height: 4rem;
+  width: 100%;
+  border-radius: 4rem;
+  font-size: $button_text;
+  font-weight: bold;
+  background-color: $black;
+  color: $white;
+
+  &.outlined {
+    background-color: transparent;
+    border: 1px solid $black;
+    color: $black;
+  }
+}
+
+@include mobile-and-tablet {
+  .roundButton {
+    height: 3.25rem;
+    border-radius: 3.25rem;
+    font-size: 1.25rem;
+  }
+}

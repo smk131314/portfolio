@@ -1,0 +1,26 @@
+@import "./variables";
+@import "./mixin";
+
+.projectSection {
+  width: 100%;
+
+  .projectsContainer {
+    @include flex-vertical;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 0 20%;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@include mobile-and-tablet {
+  .projectSection {
+    .projectsContainer {
+      padding: 0 2.25rem;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+// Colors
+$black: #000000;
+$black-opacity: rgba(0,0,0,0.85);
+$grey-dark: #2B2B2B;
+$grey-shadow: #4F4F4F;
+$grey: #808080;
+$grey-light: #EEEEEE;
+$white: #FFFFFF;
+$blue-primary: #4654C8;
+$green-primary: #43F558;
+$red: #F45237;
+$pink: rgb(223, 118, 156);
+$overlay: rgba(79, 79, 79, 0.5);
+
+// Shadow
+$narrow-shadow: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+
+// Text-size styles
+/* base size: desc (16px) */
+$extra-large: 4.25rem;
+$header: 3rem;
+$highlight: 2.5rem;
+$mobile-highlight: 2.25rem;
+$button-text: 1.5rem;
+$button-big: 2rem;
+$desc: 1rem;
+$detail: 0.75rem;
+
+// Breakpoints
+$breakpoint-mobile: 335px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// Sizes
+$main-header-height: 5rem; 
+$mobile-main-header-height: 4.5rem;

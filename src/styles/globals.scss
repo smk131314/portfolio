@@ -1,0 +1,52 @@
+@import "./variables";
+@import "./mixin";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Lato;
+  // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  //   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; 
+  background-color: $black;
+  color: $white;
+  width: 100%;
+  height: 100%;
+}
+
+main > section {
+  height: 100vh;
+  padding-top: $main-header-height;
+
+  @include mobile-and-tablet {
+    padding-top: $mobile-main-header-height;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
