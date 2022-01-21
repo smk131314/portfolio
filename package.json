@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@react-three/drei": "^8.6.1",
     "@react-three/fiber": "^7.0.25",
     "@reduxjs/toolkit": "^1.6.2",
     "@types/three": "^0.136.1",
