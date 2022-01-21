@@ -3,6 +3,7 @@
 
 .mainHeader {
   width: 100%;
+  height: $main-header-height;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,5 +21,6 @@
 @include mobile-and-tablet {
   .mainHeader {
     padding-top: 1rem;
+    height: $mobile-main-header-height;
   }
 }

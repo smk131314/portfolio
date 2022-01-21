@@ -5,8 +5,6 @@ $stepCount: 3;
 $progressBarHeight: 12rem;
 
 .experienceSection {
-  height: 100vh; //TODO: temp
-
   @include flex-horizontal;
   margin: 0 2rem;
   

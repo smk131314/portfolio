@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mixin";
 
 html,
 body {
@@ -13,7 +14,13 @@ body {
   height: 100%;
 }
 
-body {
+main > section {
+  height: 100vh;
+  padding-top: $main-header-height;
+
+  @include mobile-and-tablet {
+    padding-top: $mobile-main-header-height;
+  }
 }
 
 a {
