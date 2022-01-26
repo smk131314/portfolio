@@ -1,26 +1,17 @@
-import { Canvas, useLoader } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 
-import { Environment, OrbitControls } from '@react-three/drei'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { Suspense } from 'react'
+type MainCanvasProps = {
+  children: any
+}
 
-// const Model = () => {
-//   const gltf = useLoader(GLTFLoader, './Poimandres.gltf')
-//   return (
-//     <>
-//       <primitive object={gltf.scene} scale={0.4} />
-//     </>
-//   )
-// }
-
-const MainCanvas = () => {
+const MainCanvas = (props: MainCanvasProps) => {
+  const { children } = props
   return (
-    <Canvas>
-      <Suspense fallback={null}>
-        {/* <Model /> */}
-        <OrbitControls />
-        {/* <Environment preset='sunset' background /> */}
-      </Suspense>
+    <Canvas
+      camera={{ position: [0, -10, 80], rotation: [0, 0, 0], fov: 50 }}
+      dpr={[1, 2]}
+    >
+      {children}
     </Canvas>
   )
 }
