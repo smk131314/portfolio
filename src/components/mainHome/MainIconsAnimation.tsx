@@ -14,7 +14,7 @@ const Model = (props: any) => {
   const { name, color = 'white' } = props
   const { nodes } = useGLTF('/main_icons.gltf') as any
 
-  const { geometry, position, rotation, scale } = nodes[name]
+  const { geometry, position, rotation } = nodes[name]
 
   return (
     <mesh
@@ -23,7 +23,7 @@ const Model = (props: any) => {
       dispose={null}
       position={position}
       rotation={rotation}
-      scale={scale}
+      scale={2.1}
     >
       <meshPhongMaterial color={color} />
     </mesh>
@@ -39,6 +39,7 @@ const SelectToZoom = (props: any) => {
       api.refresh(e.object).fit()
     }
   }
+
   return (
     <group
       onClick={handleClick}
@@ -52,17 +53,17 @@ const SelectToZoom = (props: any) => {
 const MainIconsAnimation = () => {
   return (
     <MainCanvas>
-      <spotLight
-        position={[-100, -100, -100]}
-        intensity={0.2}
-        angle={0.3}
-        penumbra={1}
+      <directionalLight
+        castShadow
+        position={[850000, 1300000, 1000000]}
+        rotation={[-52.43, 27.4, -19.49]}
+        intensity={1}
       />
       <hemisphereLight
         color="white"
-        groundColor="#ff0f00"
-        position={[-7, 25, 13]}
-        intensity={1}
+        groundColor="#4F4F4F"
+        position={[-5, 10, 20]}
+        intensity={0.5}
       />
       <Suspense fallback={null}>
         <Bounds fit clip margin={1.2}>
