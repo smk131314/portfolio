@@ -6,6 +6,7 @@ import {
   OrbitControls,
   ContactShadows,
   useGLTF,
+  PresentationControls,
 } from '@react-three/drei'
 
 useGLTF.preload('/main_icons.gltf')
@@ -65,33 +66,38 @@ const MainIconsAnimation = () => {
         position={[-5, 10, 20]}
         intensity={0.5}
       />
-      <Suspense fallback={null}>
-        <Bounds fit clip margin={1.2}>
-          <SelectToZoom>
-            <Model name="Travel" color="#4654C8" />
-            <Model name="MapPin" color="#DF769C" />
-            <Model name="VideoCamera" color="#43F558" />
-            <Model name="Star" />
-            <Model name="Cylinder" />
-            <Model name="Helix" />
-            <Model name="Sphere" />
-          </SelectToZoom>
-        </Bounds>
-        <ContactShadows
-          rotation-x={Math.PI / 2}
-          position={[0, -35, 0]}
-          opacity={0.2}
-          width={200}
-          height={200}
-          blur={1}
-          far={50}
-        />
-      </Suspense>
-      <OrbitControls
-        makeDefault
-        minPolarAngle={0}
-        maxPolarAngle={Math.PI / 1.75}
-      />
+      <PresentationControls
+        global
+        config={{ mass: 2, tension: 500 }}
+        snap
+        zoom={1}
+        rotation={[0, -Math.PI / 4, 0]}
+        polar={[-Math.PI / 4, Math.PI / 4]}
+        azimuth={[-Math.PI / 4, Math.PI / 4]}
+      >
+        <Suspense fallback={null}>
+          <Bounds fit clip margin={1.2}>
+            <SelectToZoom>
+              <Model name="Travel" color="#4654C8" />
+              <Model name="MapPin" color="#DF769C" />
+              <Model name="VideoCamera" color="#43F558" />
+              <Model name="Star" />
+              <Model name="Cylinder" />
+              <Model name="Helix" />
+              <Model name="Sphere" />
+            </SelectToZoom>
+          </Bounds>
+          <ContactShadows
+            rotation-x={Math.PI / 2}
+            position={[0, -35, 0]}
+            opacity={0.2}
+            width={200}
+            height={200}
+            blur={1}
+            far={50}
+          />
+        </Suspense>
+      </PresentationControls>
     </MainCanvas>
   )
 }
