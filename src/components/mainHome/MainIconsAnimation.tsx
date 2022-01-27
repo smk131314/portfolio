@@ -81,11 +81,11 @@ const MainIconsAnimation = () => {
               <Model name="Travel" color="#4654C8" />
               <Model name="MapPin" color="#DF769C" />
               <Model name="VideoCamera" color="#43F558" />
-              <Model name="Star" />
-              <Model name="Cylinder" />
-              <Model name="Helix" />
-              <Model name="Sphere" />
             </SelectToZoom>
+            <Model name="Star" />
+            <Model name="Cylinder" />
+            <Model name="Helix" />
+            <Model name="Sphere" />
           </Bounds>
           <ContactShadows
             rotation-x={Math.PI / 2}
