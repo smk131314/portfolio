@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+require('next-transpile-modules')(['three'])
 module.exports = {
   reactStrictMode: true,
   webpack(config) {

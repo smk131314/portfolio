@@ -16,11 +16,12 @@
       font-weight: normal;
     }
   }
-  .imageContainer {
+  .canvasContainer {
     width: 50%;
-    img {
-      width: 100%;
-      object-fit: cover;
+    height: 100%;
+
+    canvas {
+      touch-action: none;
     }
   }
 }
@@ -42,7 +43,7 @@
 
     }
 
-    .imageContainer {
+    .canvasContainer {
       width: 100%;
     }
   }

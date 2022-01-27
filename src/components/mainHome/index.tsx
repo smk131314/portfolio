@@ -1,8 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
 import { LINKS } from '@src/constants/links'
 import classNames from 'classNames/bind'
 import styles from '@styles/MainHome.module.scss'
+import { MAIN_CANVAS_ID } from '@src/constants'
+import MainIconsAnimation from './MainIconsAnimation'
 
 const cx = classNames.bind(styles)
 
@@ -15,8 +16,8 @@ const MainHome = () => {
         </h1>
         <h2>with experience in Architecture</h2>
       </div>
-      <div className={cx('imageContainer')}>
-        <Image src='/images/dummy.png' alt='dummy' width={500} height={500} />
+      <div className={cx('canvasContainer')} id={MAIN_CANVAS_ID}>
+        <MainIconsAnimation />
       </div>
     </section>
   )
