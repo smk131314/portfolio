@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import Link from 'next/link'
 import { LINKS } from '@src/constants/links'
 import classNames from 'classNames/bind'
@@ -6,22 +6,22 @@ import styles from '@styles/HeaderNavigation.module.scss'
 import { useRouter } from 'next/router'
 import ListIcon from '@images/listicon.svg'
 import CloseIcon from '@images/close.svg'
+import { NavContext } from '@src/context/NavContext'
 
 const cx = classNames.bind(styles)
 
 const HeaderNavigation = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [activeTab, setActiveTab] = useState('')
+  const { activeNavLinkId, setActiveNavLinkId } = useContext(NavContext)
 
   const router = useRouter()
   const currentPath = router.asPath
 
-  useEffect(() => {
-    setActiveTab(currentPath)
-  }, [currentPath])
-
-  const getIsActiveTab = (link: string) => {
-    return activeTab === `/${link}`
+  const getIsActiveTab = (id: string) => {
+    return activeNavLinkId === id
+  }
+  const handleLinkClick = (id: string) => {
+    setActiveNavLinkId(id)
   }
 
   return (
@@ -29,11 +29,11 @@ const HeaderNavigation = () => {
       <nav className={cx('headerNavigation', { isOpen })}>
         <ul>
           {Object.keys(LINKS).map((item) => {
-            if (item === LINKS.MAIN.id.toUpperCase()) return
+            if (item === LINKS.MAIN.id.toUpperCase()) return false
             return (
               <li
                 key={LINKS[item].id}
-                className={cx({ active: getIsActiveTab(LINKS[item].link) })}
+                className={cx({ active: getIsActiveTab(LINKS[item].id) })}
               >
                 <Link href={LINKS[item].link}>{LINKS[item].title}</Link>
               </li>
@@ -41,9 +41,13 @@ const HeaderNavigation = () => {
           })}
         </ul>
       </nav>
-      <button className={cx('mobileButton')} onClick={() => setIsOpen(!isOpen)}>
+      <button
+        className={cx('mobileButton')}
+        onClick={() => setIsOpen(!isOpen)}
+        type="button"
+      >
         {isOpen ? (
-          <CloseIcon width='2.25rem' height='2.25rem' fill='white' />
+          <CloseIcon width="2.25rem" height="2.25rem" fill="white" />
         ) : (
           <ListIcon />
         )}

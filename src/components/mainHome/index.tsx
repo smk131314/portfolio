@@ -3,13 +3,16 @@ import { LINKS } from '@src/constants/links'
 import classNames from 'classNames/bind'
 import styles from '@styles/MainHome.module.scss'
 import { MAIN_CANVAS_ID } from '@src/constants'
+import { useNav } from '@src/hooks/useNav'
 import MainIconsAnimation from './MainIconsAnimation'
 
 const cx = classNames.bind(styles)
 
 const MainHome = () => {
+  const homeRef = useNav(LINKS.MAIN.id)
+
   return (
-    <section id={LINKS.MAIN.id} className={cx('mainHome')}>
+    <section id={LINKS.MAIN.id} className={cx('mainHome')} ref={homeRef}>
       <div className={cx('descriptionContainer')}>
         <h1>
           Seungmin Kim. <br />a frontend developer.
