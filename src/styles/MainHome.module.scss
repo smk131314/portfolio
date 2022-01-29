@@ -4,6 +4,7 @@
 .mainHome {
   @include flex-horizontal;
   justify-content: center;
+  height: 100vh;
   
   .descriptionContainer {
     > h1 {
