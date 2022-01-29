@@ -8,6 +8,7 @@ $progressBarHeight: 12rem;
   @include flex-horizontal;
   align-items: flex-start;
   margin: 0 2rem;
+  margin-bottom: 5rem;
   
   .progressBar {
     background-color: $blue-primary;
