@@ -11,10 +11,22 @@
     @include flex-vertical;
     width: 100%;
   }
+
+  > h1 {
+    display: none;
+  }
 }
 
 @include mobile-and-tablet {
   .projectSection {
     padding: 4rem 2.25rem;
+
+    > h1 {
+      display: block;
+      font-size: $header;
+      text-align: right;
+      color: $green-primary;
+      border-bottom: 1px solid $white;
+    }
   }
 }

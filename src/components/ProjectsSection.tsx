@@ -17,6 +17,7 @@ const ProjectsSection = () => {
       className={cx('projectSection')}
       ref={projectsRef}
     >
+      <h1>Projects</h1>
       <div className={cx('projectsContainer')}>
         {PROJECTS.map((project, index) => (
           <ProjectCard
