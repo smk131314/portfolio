@@ -1,4 +1,5 @@
 export interface ExperienceType {
+  id: string
   companyName: string
   role: string
   startDate: string
@@ -11,6 +12,7 @@ export interface ExperienceType {
 
 export const EXPERIENCES: ExperienceType[] = [
   {
+    id: 'freedGroup',
     companyName: 'FreeD Group',
     role: 'Frontend Developer',
     startDate: '12. 2020',
@@ -18,14 +20,7 @@ export const EXPERIENCES: ExperienceType[] = [
     companyDescription:
       'FreeD Group services global travel web platform based ai chatbot api',
     companyLink: 'https://www.freed.group/',
-    tags: [
-      'Web App',
-      'E-commerce',
-      'Web App',
-      'E-commerce',
-      'Web App',
-      'E-commerce',
-    ],
+    tags: ['Web App', 'E-commerce'],
     descriptions: [
       '<p>Implemented and deployed websites, <b>web applications</b>, and RCS chatbot for a travel platform and E-commerce projects.</p>',
       '<p>Improved performance on the main page.</p>',
@@ -33,6 +28,7 @@ export const EXPERIENCES: ExperienceType[] = [
     ],
   },
   {
+    id: 'wemap',
     companyName: 'Wemap',
     role: 'Frontend Developer',
     startDate: '',
@@ -43,6 +39,7 @@ export const EXPERIENCES: ExperienceType[] = [
     descriptions: [''],
   },
   {
+    id: 'toonit',
     companyName: 'Toonit',
     role: 'Frontend Developer',
     startDate: '',
