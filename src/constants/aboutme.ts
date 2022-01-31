@@ -5,7 +5,7 @@ export interface AboutMeType {
 
 export const ABOUTMELIST: AboutMeType[] = [
   {
-    title: 'Frontend Developer',
+    title: 'Developer',
     description: 'who loves gorgeous interface and user experience.',
   },
   {
