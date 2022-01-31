@@ -50,3 +50,26 @@ export const EXPERIENCES: ExperienceType[] = [
     descriptions: [''],
   },
 ]
+
+type IconInfoObjectType = {
+  iconName: string
+  color: string
+}
+type IconInfoType = {
+  [index: string]: IconInfoObjectType
+}
+
+export const ICON_INFO: IconInfoType = {
+  freedGroup: {
+    iconName: 'Travel',
+    color: '#4654C8',
+  },
+  wemap: {
+    iconName: 'MapPin',
+    color: '#DF769C',
+  },
+  toonit: {
+    iconName: 'VideoCamera',
+    color: '#43F558',
+  },
+}

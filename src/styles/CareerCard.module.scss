@@ -76,6 +76,11 @@
   .imageWrapper {
     width: 50%;
     min-width: 20rem;
+    height: 20rem;
+
+    canvas {
+      touch-action: none;
+    }
   }
 }
 

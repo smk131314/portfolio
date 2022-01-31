@@ -2,10 +2,11 @@ import React from 'react'
 import classNames from 'classNames/bind'
 import styles from '@styles/CareerCard.module.scss'
 import Image from 'next/image'
-import { ExperienceType } from '@src/constants/experiences'
+import { ExperienceType, ICON_INFO } from '@src/constants/experiences'
 import LinkIcon from '@images/north_east.svg'
 import MoreIcon from '@images/more.svg'
 import { useProgress } from '@src/hooks/useProgress'
+import SingleModelAnimation from './SingleModelAnimation'
 
 const cx = classNames.bind(styles)
 
@@ -26,6 +27,9 @@ const CareerCard = (props: CareerCardProps) => {
     descriptions,
     id,
   } = infoObj
+
+  const { iconName, color } = ICON_INFO[id]
+
   const careerCardRef = useProgress(id)
 
   return (
@@ -63,7 +67,7 @@ const CareerCard = (props: CareerCardProps) => {
         </div>
       </div>
       <div className={cx('imageWrapper')}>
-        <Image src="/images/dummy_item.png" alt="" width={500} height={500} />
+        <SingleModelAnimation name={iconName} color={color} />
       </div>
     </div>
   )
