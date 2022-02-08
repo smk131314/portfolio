@@ -29,10 +29,6 @@ const ThreeModel = (props: ThreeModelProps) => {
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
     if (modelRef.current) {
-      // modelRef.current.rotation.x = -Math.PI / 1.75 + Math.cos(t / 4) / 8
-      // modelRef.current.rotation.y = Math.sin(t / 4) / 8
-      // modelRef.current.rotation.z = (1 + Math.sin(t / 1.5)) / 20
-      // modelRef.current.position.y = (1 + Math.sin(t / 1.5)) / 10
       modelRef.current.rotation.x = THREE.MathUtils.lerp(
         modelRef.current.rotation.x,
         Math.cos(t / 2) / 8 + 0.25,
