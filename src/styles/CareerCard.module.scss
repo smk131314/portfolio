@@ -6,7 +6,7 @@
 
   .cardContainer {
     flex: 1;
-
+    
     > h1 {
       font-size: $header;
       line-height: 2.75rem;
@@ -76,7 +76,8 @@
   .imageWrapper {
     width: 50%;
     min-width: 20rem;
-    height: 20rem;
+    height: 25rem;
+    margin-left: 2rem;
 
     canvas {
       touch-action: none;
@@ -105,6 +106,12 @@
       .tagsContainer {
         margin-top: 1.5rem;
       }
+    }
+
+    .imageWrapper {
+      margin-left: 0;
+      height: 15rem;
+      width: 100%;
     }
   }
 }

@@ -16,7 +16,9 @@ const SingleModelAnimation = (props: SingleModelAnimationProps) => {
   const { name, color } = props
 
   return (
-    <MainCanvas>
+    <MainCanvas
+      cameraSetting={{ position: [0, 0, 80], rotation: [0, 0, 0], fov: 50 }}
+    >
       <directionalLight
         castShadow
         position={[850000, 1300000, 1000000]}
@@ -39,7 +41,11 @@ const SingleModelAnimation = (props: SingleModelAnimationProps) => {
         azimuth={[-Math.PI / 4, Math.PI / 4]}
       >
         <Suspense fallback={null}>
-          <ThreeModel name={name} color={color} />
+          <ThreeModel
+            name={name}
+            color={color}
+            scale={name === 'VideoCamera' ? 0.4 : 0.5}
+          />
           <ContactShadows
             rotation-x={Math.PI / 2}
             position={[0, -35, 0]}
