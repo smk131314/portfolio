@@ -1,6 +1,6 @@
-import React, { Suspense, useRef } from 'react'
+import React, { Suspense, useRef, useEffect } from 'react'
 import MainCanvas from '@components/common/MainCanvas'
-import { useFrame } from '@react-three/fiber'
+import { useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import {
   Bounds,
@@ -71,6 +71,12 @@ const ModelGroup = () => {
       })
     }
   })
+
+  const { camera } = useThree()
+  useEffect(() => {
+    camera.zoom = 1.5
+    camera.updateProjectionMatrix()
+  }, [])
 
   return (
     <group ref={groupRef}>
