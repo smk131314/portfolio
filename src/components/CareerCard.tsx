@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import classNames from 'classNames/bind'
+import classNames from 'classnames/bind'
 import styles from '@styles/CareerCard.module.scss'
 import { ExperienceType, ICON_INFO } from '@src/constants/experiences'
 import LinkIcon from '@images/north_east.svg'

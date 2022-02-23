@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from '@styles/Contact.module.scss'
-import classNames from 'classNames/bind'
+import classNames from 'classnames/bind'
 import ArrowIcon from '@images/arrow.svg'
 import CloseIcon from '@images/close.svg'
 import BaseSidebar from '@components/common/BaseSidebar'

@@ -1,5 +1,5 @@
 import React from 'react'
-import classNames from 'classNames/bind'
+import classNames from 'classnames/bind'
 import styles from '@styles/ProjectsSection.module.scss'
 import { LINKS } from '@src/constants/links'
 import { PROJECTS } from '@src/constants/projects'

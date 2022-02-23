@@ -1,5 +1,5 @@
 import React from 'react'
-import classNames from 'classNames/bind'
+import classNames from 'classnames/bind'
 import styles from '@styles/ScrollDownButton.module.scss'
 import DoubleArrowIcon from '@images/double_arrow_down.svg'
 import RoundButton from '../common/RoundButton'

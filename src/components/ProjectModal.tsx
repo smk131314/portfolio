@@ -1,5 +1,5 @@
 import React from 'react'
-import classNames from 'classNames/bind'
+import classNames from 'classnames/bind'
 import styles from '@styles/ProjectModal.module.scss'
 import BaseSidebar from '@components/common/BaseSidebar'
 import CloseIcon from '@images/close.svg'

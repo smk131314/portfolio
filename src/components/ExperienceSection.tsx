@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { LINKS } from '@src/constants/links'
-import classNames from 'classNames/bind'
+import classNames from 'classnames/bind'
 import styles from '@styles/ExperienceSection.module.scss'
 import { EXPERIENCES } from '@src/constants/experiences'
 import { useNav } from '@src/hooks/useNav'
