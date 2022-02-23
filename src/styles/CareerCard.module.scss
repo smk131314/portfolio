@@ -22,7 +22,11 @@
       }
 
       > a {
-        @include circle-icon(2.25rem, $blue-primary)
+        @include circle-icon(2.25rem, $blue-primary);
+
+        &:hover {
+          @include button-animation($white);
+        }
       }
     }
 
@@ -49,6 +53,10 @@
       }
       .moreButton {
         @include circle-icon(2.25rem, $white);
+
+        &:hover {
+          @include button-animation($blue-primary);
+        }
       }
     }
 

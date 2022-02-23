@@ -58,6 +58,9 @@
 
     & > a {
       @include circle-icon(2.25rem, $white);
+      &:hover {
+        @include button-animation($green-primary);
+      }
     }
     & a:first-child {
       margin-right: 0.75rem;

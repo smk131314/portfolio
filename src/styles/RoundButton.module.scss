@@ -10,10 +10,20 @@
   background-color: $black;
   color: $white;
 
+  &:hover {
+    @include button-animation($black);
+    background-color: transparent;
+    border: 1px solid $black;
+  }
+
   &.outlined {
     background-color: transparent;
     border: 1px solid $black;
     color: $black;
+
+    &:hover {
+      @include button-animation($white);
+    }
   }
 
   &.scrollDownButton {
