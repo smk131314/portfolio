@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from '@styles/Contact.module.scss'
 import classNames from 'classNames/bind'
-import ArrowIcon from '@components/common/ArrowIcon'
+import ArrowIcon from '@images/arrow.svg'
 import CloseIcon from '@images/close.svg'
 import BaseSidebar from '@components/common/BaseSidebar'
 import RoundButton from '@components/common/RoundButton'
