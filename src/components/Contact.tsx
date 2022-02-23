@@ -73,7 +73,7 @@ const Contact = () => {
                   </li>
                 ))}
               </ul>
-              <p>Seoul, South Korea</p>
+              <p>London, United Kingdom</p>
             </section>
           </div>
         </BaseSidebar>
