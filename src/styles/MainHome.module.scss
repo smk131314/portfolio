@@ -3,18 +3,30 @@
 
 .mainHome {
   @include flex-horizontal;
-  justify-content: center;
   height: 100vh;
   
   .descriptionContainer {
+    width: 40%;
+    padding: 1.5rem;
     > h1 {
       font-size: $extra-large;
       font-weight: bold;
       line-height: calc($extra-large - 0.5rem);
+      > p {
+        color: $grey-light;
+        font-size: $highlight;
+        line-height: calc($highlight - 0.5rem);
+        margin-top: 1rem;
+      }
     }
     > h2 {
-      font-size: $button-text;
-      font-weight: normal;
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+      font-weight: 500;
+      margin-top: 4rem;
+      > p:last-child {
+        margin-top: 1rem;
+      }
     }
   }
   .canvasContainer {
@@ -33,13 +45,23 @@
     margin: 0 2.25rem;
 
     .descriptionContainer {
+      width: 100%;
       > h1 {
         font-size: $highlight;
         line-height: calc($highlight - 0.25rem);
         font-weight: 600;
+        > p {
+          font-size: $mobile-highlight;
+          line-height: calc($mobile-highlight - 0.5rem);
+        }
       }
       > h2 {
         font-size: $desc;
+        line-height: $desc;
+        margin-top: 3rem;
+        > p:last-child {
+          margin-top: 0.5rem;
+        }
       }
 
     }
