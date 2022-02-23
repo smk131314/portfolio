@@ -13,7 +13,11 @@ const RoundButton = (props: RoundButtonProps) => {
   const { onClick, children, className } = props
 
   return (
-    <button className={cx('roundButton', className)} onClick={onClick}>
+    <button
+      className={cx('roundButton', className)}
+      onClick={onClick}
+      type="button"
+    >
       {children}
     </button>
   )

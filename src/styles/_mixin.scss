@@ -61,3 +61,13 @@
   padding: 0 1.5rem;
   line-height: $height;
 }
+
+@mixin button-animation($color) {
+  border-color: $color;
+  transition: all 0.2s ease-out;
+  color: $color;
+  svg, path {
+    fill: $color;
+    transition: all 0.2s ease-out;
+  }
+}

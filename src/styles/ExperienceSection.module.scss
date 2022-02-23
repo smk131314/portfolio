@@ -6,19 +6,32 @@ $progressBarHeight: 12rem;
 
 .experienceSection {
   @include flex-horizontal;
+  align-items: flex-start;
   margin: 0 2rem;
+  margin-bottom: 5rem;
   
   .progressBar {
-    background-color: $blue-primary;
-    width: 0.25rem;
+    background-color: $grey-light;
+    background-clip: content-box;
+    width: 0.2rem;
     height: $progressBarHeight;
-    position: relative;
     padding: 0.5rem 0;
     margin-right: 10rem;
+
+    position: sticky;
+    position: -webkit-sticky;
+    top: 15rem;
   }
   .progressBarBg {
-    background-color: $grey-light;
-    height: 100%;
+    background-color: $blue-primary;
+    height: 0%;
+
+    &.middle {
+      height: 50%;
+    }
+    &.end {
+      height: 100%;
+    }
   }
   .progressStep {
     display: flex;
@@ -45,6 +58,7 @@ $progressBarHeight: 12rem;
       border-radius: 1rem;
       border: 0.125rem solid $grey-light;
       background-color: $black;
+      box-shadow: 0 0 15px $black;
     }
     .progressLabel {
       font-size: $desc;
@@ -52,17 +66,32 @@ $progressBarHeight: 12rem;
       color: $grey-light;
       margin-left: 1rem;
     }
-  }
 
+    .progressIndicator,
+    .progressLabel {
+      transition: all 0.5s ease-out;
+    }
+    .progressBarBg {
+      transition: height 4s ease-in-out;
+    }
+
+    &.active .progressLabel {
+      color: $blue-primary;
+      font-weight: bold;
+    }
+    
+    &.active .progressIndicator,
+    .progressIndicator.passed {
+      border: 0.125rem solid $blue-primary;
+      background-color: $blue-primary;
+    }
+  }
+  
   .cardContainer {
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: scroll;
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    min-height: 300vh;
+    @include flex-vertical;
+    justify-content: space-between;
   }
 }
 

@@ -24,6 +24,12 @@
   .imageWrapper {
     text-align: center;
     margin-bottom: 1rem;
+    padding: 1rem;
+    > img {
+      width: 60%;
+      height: auto;
+      border-radius: 0.25rem;
+    }
   }
 
   .downButton {

@@ -14,7 +14,7 @@ const BaseSidebar = (props: BaseSidebarProps) => {
   const { children, onClose, className } = props
 
   return (
-    <div className={cx('sideBarWrapper', className)}>
+    <div className={cx('sideBarWrapper', className)} role="dialog">
       <div className={cx('overlay')} onClick={onClose} />
       <aside className={cx('contentContainer')}>{children}</aside>
     </div>

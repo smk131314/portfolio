@@ -1,0 +1,9 @@
+@import "./variables";
+@import "./mixin";
+
+.scrollDownButtonWrapper {
+  position: fixed;
+  bottom: 2rem;
+  left: 1.5rem;
+  z-index: 200;
+}

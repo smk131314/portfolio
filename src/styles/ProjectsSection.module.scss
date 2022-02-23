@@ -3,24 +3,30 @@
 
 .projectSection {
   width: 100%;
+  background-color: #171717;
+  padding: 10% 20%;
+  box-shadow: 0 0 15px #171717, 0 0 15px #171717;
 
   .projectsContainer {
     @include flex-vertical;
     width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    padding: 0 20%;
-    
-    &::-webkit-scrollbar {
-      display: none;
-    }
+  }
+
+  > h1 {
+    display: none;
   }
 }
 
 @include mobile-and-tablet {
   .projectSection {
-    .projectsContainer {
-      padding: 0 2.25rem;
+    padding: 4rem 2.25rem;
+
+    > h1 {
+      display: block;
+      font-size: $header;
+      text-align: right;
+      color: $green-primary;
+      border-bottom: 1px solid $white;
     }
   }
 }

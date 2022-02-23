@@ -2,15 +2,16 @@ import { Canvas } from '@react-three/fiber'
 
 type MainCanvasProps = {
   children: any
+  cameraSetting?: any
 }
 
 const MainCanvas = (props: MainCanvasProps) => {
-  const { children } = props
+  const {
+    children,
+    cameraSetting = { position: [0, -10, 80], rotation: [0, 0, 0], fov: 50 },
+  } = props
   return (
-    <Canvas
-      camera={{ position: [0, -10, 80], rotation: [0, 0, 0], fov: 50 }}
-      dpr={[1, 2]}
-    >
+    <Canvas camera={cameraSetting} dpr={[1, 2]}>
       {children}
     </Canvas>
   )

@@ -6,7 +6,7 @@
 
   .cardContainer {
     flex: 1;
-
+    
     > h1 {
       font-size: $header;
       line-height: 2.75rem;
@@ -22,7 +22,11 @@
       }
 
       > a {
-        @include circle-icon(2.25rem, $blue-primary)
+        @include circle-icon(2.25rem, $blue-primary);
+
+        &:hover {
+          @include button-animation($white);
+        }
       }
     }
 
@@ -49,6 +53,10 @@
       }
       .moreButton {
         @include circle-icon(2.25rem, $white);
+
+        &:hover {
+          @include button-animation($blue-primary);
+        }
       }
     }
 
@@ -76,12 +84,19 @@
   .imageWrapper {
     width: 50%;
     min-width: 20rem;
+    height: 25rem;
+    margin-left: 2rem;
+
+    canvas {
+      touch-action: none;
+    }
   }
 }
 
 @include mobile-and-tablet {
   .careerCard {
     @include flex-vertical;
+    margin-top: 5rem;
 
     .cardContainer {
       > h1 {
@@ -100,6 +115,12 @@
       .tagsContainer {
         margin-top: 1.5rem;
       }
+    }
+
+    .imageWrapper {
+      margin-left: 0;
+      height: 15rem;
+      width: 100%;
     }
   }
 }
