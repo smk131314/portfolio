@@ -5,6 +5,7 @@ import styles from '@styles/MainHome.module.scss'
 import { MAIN_CANVAS_ID } from '@src/constants'
 import { useNav } from '@src/hooks/useNav'
 import MainIconsAnimation from './MainIconsAnimation'
+import ScrollDownButton from './ScrollDownButton'
 
 const cx = classNames.bind(styles)
 
@@ -22,6 +23,7 @@ const MainHome = () => {
       <div className={cx('canvasContainer')} id={MAIN_CANVAS_ID}>
         <MainIconsAnimation />
       </div>
+      <ScrollDownButton />
     </section>
   )
 }

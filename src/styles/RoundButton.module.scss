@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./mixin";
+@import './variables';
+@import './mixin';
 
 .roundButton {
   height: 4rem;
@@ -14,6 +14,20 @@
     background-color: transparent;
     border: 1px solid $black;
     color: $black;
+  }
+
+  &.scrollDownButton {
+    border: 1px solid $white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    line-height: 3rem;
+    padding: 0.5rem 0;
+    background-color: transparent;
+
+    &:hover {
+      border-color: transparent;
+    }
   }
 }
 
