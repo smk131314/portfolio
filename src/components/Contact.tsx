@@ -38,11 +38,13 @@ const Contact = () => {
     setIsSideBarOpen(false)
     document.body.style.overflow = 'auto'
   }
-  const openCvLink = () => {}
+  const openCvLink = () => {
+    console.log('open cv')
+  }
 
   return (
     <>
-      <button className={cx('contactButton')} onClick={openModal}>
+      <button className={cx('contactButton')} onClick={openModal} type="button">
         <p>Contact</p>
         <div className={cx('circle')}>
           <ArrowIcon />
@@ -58,14 +60,16 @@ const Contact = () => {
               <h1>Contact</h1>
               <div className={cx('buttonsWrapper')}>
                 <RoundButton className="outlined">
-                  <a href='mailto:jade.sm.kim@gmail.com'>Send me an E-mail</a>
+                  <a href="mailto:jade.sm.kim@gmail.com">Send me an E-mail</a>
                 </RoundButton>
                 <RoundButton onClick={openCvLink}>Check out CV</RoundButton>
               </div>
               <ul className={cx('iconsWrapper')}>
                 {socialLinkList.map((socialLink) => (
                   <li key={socialLink.name}>
-                    <a href={socialLink.url}>{socialLink.icon}</a>
+                    <a href={socialLink.url} target="_blank" rel="noreferrer">
+                      {socialLink.icon}
+                    </a>
                   </li>
                 ))}
               </ul>

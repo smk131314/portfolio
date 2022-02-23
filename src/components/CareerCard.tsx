@@ -1,7 +1,6 @@
 import React from 'react'
 import classNames from 'classNames/bind'
 import styles from '@styles/CareerCard.module.scss'
-import Image from 'next/image'
 import { ExperienceType, ICON_INFO } from '@src/constants/experiences'
 import LinkIcon from '@images/north_east.svg'
 import MoreIcon from '@images/more.svg'
@@ -38,14 +37,14 @@ const CareerCard = (props: CareerCardProps) => {
         <h1>{role}</h1>
         <div className={cx('companyNameWrapper')}>
           <p>@{companyName}</p>
-          <a href={companyLink}>
+          <a href={companyLink} target="_blank" rel="noreferrer">
             <LinkIcon width="1rem" height="1rem" fill="#4654C8" />
           </a>
         </div>
         <p className={cx('dateInfo')}>{`${startDate} - ${endDate}`}</p>
         <p className={cx('companyInfo')}>{companyDescription}</p>
         <div className={cx('tagsContainer')}>
-          {tags.map((tag, index) => (
+          {tags.map((tag) => (
             <div className={cx('tag')} key={tag}>
               {tag}
             </div>
@@ -57,7 +56,7 @@ const CareerCard = (props: CareerCardProps) => {
         <div className={cx('descWrapper')}>
           <p>Role</p>
           <ul>
-            {descriptions.map((description, index) => (
+            {descriptions.map((description) => (
               <li
                 key={description}
                 dangerouslySetInnerHTML={{ __html: description }}
