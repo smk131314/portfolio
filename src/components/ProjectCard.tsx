@@ -5,6 +5,7 @@ import { ProjectType } from '@src/constants/projects'
 import LinkIcon from '@images/north_east.svg'
 import GithubIcon from '@images/github.svg'
 import Image from 'next/image'
+import EmptyImageIcon from '@images/folder_open.svg'
 import ProjectModal from './ProjectModal'
 
 const cx = classNames.bind(styles)
@@ -29,6 +30,7 @@ const ProjectCard = (props: ProjectCardProps) => {
     tags,
     descriptions,
     previewPath,
+    imagePath,
   } = infoObj
 
   const openModal = () => {
@@ -60,17 +62,21 @@ const ProjectCard = (props: ProjectCardProps) => {
             </div>
           </div>
           <span className={cx('companyName')}>{companyName}</span>
-          <span>{`${startDate} - ${endDate}`}</span>
+          {startDate && <span>{`${startDate} - ${endDate}`}</span>}
           <p>{summary}</p>
         </div>
         <div className={cx('descriptionContainer')}>
           <div className={cx('previewContainer')}>
-            <Image
-              src={previewPath || '/images/dummy_item.png'}
-              alt={`${projectName} project preview`}
-              width={280}
-              height={200}
-            />
+            {previewPath ? (
+              <Image
+                src={previewPath}
+                alt={`${projectName} project preview`}
+                width={280}
+                height={200}
+              />
+            ) : (
+              <EmptyImageIcon width="5rem" height="5rem" />
+            )}
           </div>
           <div className={cx('textContainer')}>
             <div className={cx('tagsContainer')}>
@@ -90,11 +96,15 @@ const ProjectCard = (props: ProjectCardProps) => {
             </ul>
           </div>
         </div>
-        <button type="button" onClick={openModal}>
-          Learn More
-        </button>
+        {imagePath && (
+          <button type="button" onClick={openModal}>
+            Learn More
+          </button>
+        )}
       </div>
-      {isModalOpen && <ProjectModal onClose={closeModal} />}
+      {isModalOpen && (
+        <ProjectModal onClose={closeModal} imagePath={imagePath} />
+      )}
     </div>
   )
 }

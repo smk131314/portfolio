@@ -21,7 +21,7 @@ const ProjectsSection = () => {
       <div className={cx('projectsContainer')}>
         {PROJECTS.map((project, index) => (
           <ProjectCard
-            key={project.projectName}
+            key={project.id}
             infoObj={project}
             isRightAligned={index % 2 === 1}
           />
