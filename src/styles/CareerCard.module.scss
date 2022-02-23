@@ -88,6 +88,7 @@
 @include mobile-and-tablet {
   .careerCard {
     @include flex-vertical;
+    margin-top: 5rem;
 
     .cardContainer {
       > h1 {
