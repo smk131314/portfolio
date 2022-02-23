@@ -7,7 +7,8 @@
     "start": "next start",
     "lint": "eslint \"*/**/*.{js,ts,tsx}\" --fix",
     "precommit": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "next build && next export"
   },
   "dependencies": {
     "@react-three/drei": "^8.6.1",
