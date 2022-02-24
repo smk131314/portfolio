@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '@styles/RoundButton.module.scss'
-import classNames from 'classNames/bind'
+import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 

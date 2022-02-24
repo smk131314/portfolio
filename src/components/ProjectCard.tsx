@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import classNames from 'classNames/bind'
+import classNames from 'classnames/bind'
 import styles from '@styles/ProjectCard.module.scss'
 import { ProjectType } from '@src/constants/projects'
 import LinkIcon from '@images/north_east.svg'

@@ -36,7 +36,8 @@
     background-color: transparent;
 
     &:hover {
-      border-color: transparent;
+      // border-color: transparent;
+      @include button-animation($blue-primary);
     }
   }
 }

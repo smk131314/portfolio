@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import Link from 'next/link'
 import { LINKS } from '@src/constants/links'
-import classNames from 'classNames/bind'
+import classNames from 'classnames/bind'
 import styles from '@styles/HeaderNavigation.module.scss'
 import { useRouter } from 'next/router'
 import ListIcon from '@images/listicon.svg'

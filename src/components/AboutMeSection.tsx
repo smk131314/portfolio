@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { LINKS } from '@src/constants/links'
-import classNames from 'classNames/bind'
+import classNames from 'classnames/bind'
 import styles from '@styles/AboutMeSection.module.scss'
 import { ABOUTMELIST } from '@src/constants/aboutme'
 import { useNav } from '@src/hooks/useNav'

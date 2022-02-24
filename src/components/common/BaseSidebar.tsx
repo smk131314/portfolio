@@ -1,6 +1,6 @@
 import React, { ReactNode, useRef } from 'react'
 import styles from '@styles/BaseSidebar.module.scss'
-import classNames from 'classNames/bind'
+import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 

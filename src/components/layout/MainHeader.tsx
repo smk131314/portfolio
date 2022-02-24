@@ -3,7 +3,7 @@ import HeaderNavigation from '@components/HeaderNavigation'
 import Contact from '@components/Contact'
 import { LINKS } from '@src/constants/links'
 import styles from '@styles/MainHeader.module.scss'
-import classNames from 'classNames/bind'
+import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { LINKS } from '@src/constants/links'
-import classNames from 'classNames/bind'
+import classNames from 'classnames/bind'
 import styles from '@styles/MainHome.module.scss'
 import {
   MAIN_CANVAS_ID,

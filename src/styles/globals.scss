@@ -12,6 +12,12 @@ body {
   height: 100%;
 }
 
+@include mobile-and-tablet {
+  html, body {
+    font-family: Open Sans, Helvetica, "Apple SD Gothic Neo",sans-serif;
+  }
+}
+
 main > section {
   padding-top: $main-header-height;
 
