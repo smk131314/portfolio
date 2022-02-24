@@ -2,8 +2,17 @@
 @import "./mixin";
 
 .scrollDownButtonWrapper {
+  @include flex-vertical;
+
   position: fixed;
   bottom: 2rem;
-  left: 1.5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
   z-index: 200;
+  opacity: 0.4;
+
+  p {
+    font-size: $detail;
+    margin-bottom: 0.5rem;
+  }
 }

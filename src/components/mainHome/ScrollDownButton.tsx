@@ -9,6 +9,7 @@ const cx = classNames.bind(styles)
 const ScrollDownButton = () => {
   return (
     <div className={cx('scrollDownButtonWrapper')}>
+      <p>Scroll Down</p>
       <RoundButton className="scrollDownButton">
         <DoubleArrowIcon width="2rem" height="2rem" fill="white" />
       </RoundButton>
