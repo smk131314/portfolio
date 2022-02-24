@@ -32,7 +32,7 @@ export const PROJECTS: ProjectType[] = [
       '<p>Created <b>3D modeling</b> file with free 3D icon assets</p>',
       '<p>Implemented a basic <b>animation</b> of 3D modelings</p>',
     ],
-    previewPath: '/images/portfolio_preview.png',
+    previewPath: '/images/portfolio_preview.PNG',
     imagePath: '',
   },
   {
@@ -74,7 +74,7 @@ export const PROJECTS: ProjectType[] = [
       '<p>Implemented cart and order logic with <b>REST APIs</b> in the chatbot</p>',
       '<p>Implemented delivery address related logic with <b>third-party APIs</b></p>',
     ],
-    previewPath: '/images/ssocrates_preview.png',
+    previewPath: '/images/ssocrates_preview.PNG',
     imagePath: '/images/ssocrates_more.png',
   },
   {
