@@ -23,7 +23,7 @@ const socialLinkList = [
   },
   {
     name: 'instagram',
-    url: '',
+    url: 'https://www.instagram.com/jade.keeeem',
     icon: <InstagramIcon width="1.25rem" height="1.25rem" />,
   },
 ]
@@ -37,9 +37,6 @@ const Contact = () => {
   const closeModal = () => {
     setIsSideBarOpen(false)
     document.body.style.overflow = 'auto'
-  }
-  const openCvLink = () => {
-    console.log('open cv')
   }
 
   return (
@@ -62,7 +59,15 @@ const Contact = () => {
                 <RoundButton className="outlined">
                   <a href="mailto:jade.sm.kim@gmail.com">Send me an E-mail</a>
                 </RoundButton>
-                <RoundButton onClick={openCvLink}>Check out CV</RoundButton>
+                <RoundButton>
+                  <a
+                    target="_blank"
+                    href="https://drive.google.com/file/d/1S0YeDwPPFsNbMmjq1fYASUTPsqsJFkDZ/view?usp=sharing"
+                    rel="noreferrer"
+                  >
+                    Check out CV
+                  </a>
+                </RoundButton>
               </div>
               <ul className={cx('iconsWrapper')}>
                 {socialLinkList.map((socialLink) => (
