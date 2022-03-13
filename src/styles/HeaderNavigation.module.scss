@@ -1,0 +1,74 @@
+@import "./variables";
+@import "./mixin";
+
+.headerNavigation {
+  font-size: $button-text;
+
+  > ul {
+    display: flex;
+    padding: 0;
+
+    li {
+      margin-right: 1rem;
+      &:not(:first-child)::before{
+        content: '/';
+        margin-right: 1rem;
+      }
+      &.active {
+        color: $green-primary;
+        font-weight: bold;
+        &:not(:first-child)::before {
+          color: white;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+
+.mobileButton {
+  display: none;
+}
+
+@include mobile-and-tablet {
+  .mobileButton {
+    display: block;
+    height: 3.5rem;
+    width: 3.5rem;
+    z-index: 3;
+    margin: 0 auto;
+  }
+
+  .headerNavigation {
+    display: none;
+
+    &.isOpen {
+      display: block;
+
+      > ul {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $black;
+        margin-top: 0;
+        width: 100%;
+        height: 100vh;
+        padding-top: 4rem;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10%;
+    
+        li {
+          margin-bottom: 1.5rem;
+          font-size: $header;
+    
+          &:not(:first-child)::before {
+            content: '';
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

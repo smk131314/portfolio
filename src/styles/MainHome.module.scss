@@ -1,0 +1,74 @@
+@import "./variables";
+@import "./mixin";
+
+.mainHome {
+  @include flex-horizontal;
+  height: 100vh;
+  
+  .descriptionContainer {
+    width: 40%;
+    padding: 1.5rem;
+    > h1 {
+      font-size: $extra-large;
+      font-weight: bold;
+      line-height: calc($extra-large - 0.5rem);
+      > p {
+        color: $grey-light;
+        font-size: $highlight;
+        line-height: calc($highlight - 0.5rem);
+        margin-top: 1rem;
+        opacity: 0.7;
+      }
+    }
+    > h2 {
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+      font-weight: 500;
+      margin-top: 4rem;
+      > p:last-child {
+        margin-top: 1rem;
+      }
+    }
+  }
+  .canvasContainer {
+    width: 50%;
+    height: 100%;
+
+    canvas {
+      touch-action: none;
+    }
+  }
+}
+
+@include mobile-and-tablet {
+  .mainHome {
+    @include flex-vertical;
+    margin: 0 2.25rem;
+
+    .descriptionContainer {
+      width: 100%;
+      > h1 {
+        font-size: $highlight;
+        line-height: calc($highlight - 0.25rem);
+        font-weight: 600;
+        > p {
+          font-size: $mobile-highlight;
+          line-height: calc($mobile-highlight - 0.5rem);
+        }
+      }
+      > h2 {
+        font-size: $desc;
+        line-height: $desc;
+        margin-top: 3rem;
+        > p:last-child {
+          margin-top: 0.5rem;
+        }
+      }
+
+    }
+
+    .canvasContainer {
+      width: 100%;
+    }
+  }
+}

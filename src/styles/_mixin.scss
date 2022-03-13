@@ -1,0 +1,73 @@
+@import "./variables";
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-and-tablet {
+  @media (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin button {
+  height: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
+}
+
+@mixin flex-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin circle-icon($size, $color) {
+  border: 1px solid $color;
+  width: $size;
+  height: $size;
+  border-radius: $size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin tag($height, $color) {
+  height: $height;
+  border-radius: $height;
+  border: 1px solid $color;
+  color: $color;
+  padding: 0 1.5rem;
+  line-height: $height;
+}
+
+@mixin button-animation($color) {
+  border-color: $color;
+  transition: all 0.2s ease-out;
+  color: $color;
+  svg, path {
+    fill: $color;
+    transition: all 0.2s ease-out;
+  }
+}

@@ -1,0 +1,128 @@
+@import "./variables";
+@import "./mixin";
+
+$fixed-text-width: 14.5rem;
+
+.aboutMeSection {
+  width: 100%;
+  height: 100vh;
+  padding: 4.5rem;
+  @include flex-vertical;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: $extra-large;
+  font-weight: 600;
+
+  ul {
+    margin: 0;
+  }
+
+  .spinnerContainer {
+    @include flex-vertical;
+    width: 100%;
+  }
+  
+  .spinnerWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    overflow: hidden;
+
+    > span {
+      width: $fixed-text-width;
+    }
+  }
+
+  .spinner {
+    flex: 1;
+    height: 15rem;
+    overflow-y: hidden;
+    line-height: calc($extra-large - 0.25rem);
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, $black 0%, rgba(196, 196, 196, 0) 40%, rgba(80, 80, 80, 0) 60%, $black 100%);
+      pointer-events: none;
+    }
+
+    > button {
+      font-size: $extra-large;
+      font-weight: 600;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: calc(15rem/2 - $extra-large/2);
+      opacity: 0;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+
+      &:nth-child(1) {
+        color: $blue-primary;
+      }
+      &:nth-child(2) {
+        color: $green-primary;
+      }
+      &:nth-child(3) {
+        color: $pink;
+      }
+      &:nth-child(4) {
+        color: $red;
+      }
+
+      &.visible {
+        opacity: 1;
+      }
+    }
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #000000 0%, rgba(196, 196, 196, 0) 27.5%, rgba(80, 80, 80, 0.2) 71.53%, #000000 100%);
+  }
+
+  .description {
+    font-size: $highlight;
+    font-weight: 600;
+    line-height: calc($highlight - 0.25rem);
+    text-align: left;
+    width: 100%;
+  }
+}
+
+@include mobile-and-tablet {
+  .aboutMeSection {
+    padding: 2.5rem;
+    font-size: $header;
+
+    .spinnerWrapper {
+      @include flex-vertical;
+      width: 100%;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .spinner {
+      flex: none;
+      // font-size: $highlight;
+      // line-height: calc($highlight - 0.25rem);
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    .description {
+      font-size: $button-text;
+      line-height: calc($button-text + 0.25rem);
+    }
+  }
+}
