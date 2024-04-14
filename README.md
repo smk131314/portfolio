@@ -1,1 +1,1 @@
-http://seungminkim.vercel.app/
+seungminkim.com
